@@ -1,1 +1,4 @@
-# currency-converter-app
+# Currency Converter
+
+  - JS
+  - TailwindCSS

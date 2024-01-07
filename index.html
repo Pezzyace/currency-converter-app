@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- TAILWIND CSS LINK -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Currency Converter</title>
+</head>
+<body class="m-0 p-0 font-['Poppins'] border-none bg-orange-500">
+  <h2 class="mt-40 mb-8 text-white uppercase font-bold text-center text-3xl">Currency Converter</h2>
+  <div class="w-10/12 min-[480px]:w-8/12 md:w-5/12 lg:w-4/12 min-[1100px]:w-3/12 sm:w-6/12 m-auto flex flex-col bg-white p-8 rounded">
+    <img width="60" height="60" src="https://img.icons8.com/pulsar-color/48/conversion-currencies.png" alt="conversion-currencies" class="m-auto mb-8"/>
+    
+    <div class="flex flex-col">
+      <label for="" class="text-slate-900 mb-2 text-xl">Amount</label>
+      <input type="number" name="" id="amount" value="100" placeholder="100" class="border-b border-solid border-slate-900 p-2 text-xl outline-none mb-6 input">
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <select id="from-this-currency" class="bg-orange-500 text-white font-semibold p-3 rounded outline-none bg-[url('https://img.icons8.com/fluency-systems-filled/15/ffffff/chevron-down--v2.png')] bg-no-repeat"></select>
+        <select id="to-this-currency" class="bg-orange-500 text-white font-semibold p-3 rounded outline-none bg-[url('https://img.icons8.com/fluency-systems-filled/15/ffffff/chevron-down--v2.png')] bg-no-repeat"></select>
+      </div>
+      <button class="w-full bg-orange-500 text-white py-4 rounded cursor-pointer border border-solid border-transparent hover:bg-white hover:border-orange-500 hover:text-orange-500 transition-all ease-in-out duration-500 mb-6" id="convert-btn">Convert</button>
+      <div class="w-full flex justify-center bg-gray-200 uppercase text-xl py-4 rounded" id="result"></div>
+    </div>
+  </div>
+  <style>
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button, select {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    select{
+        background-position: right 15px top 50%, center;
+    }
+    select option{
+      background-color: #fff;
+      color: #02002c;
+    }
+  </style>
+  
+  <script src="./js/country-codes.js" type="text/javascript"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
