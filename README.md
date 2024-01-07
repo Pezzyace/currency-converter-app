@@ -2,3 +2,6 @@
 
   - JS
   - TailwindCSS
+
+## API
+  - Exchangerates-api
